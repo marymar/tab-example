@@ -32,7 +32,6 @@ $buttons: (
 @each $button-name, $button-settings in $buttons {
   .button-#{$button-name} {
     @extend %button;
-    @debug map-get($button-settings, 'bg-color');
     background: none map-get($button-settings, bg-color);
     color: map-get($button-settings, color);
   }
