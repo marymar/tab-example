@@ -16,7 +16,7 @@ App.prototype.init = function() {
 
     this.initListener(this.menuItems);
     this.initListener(this.infoItems, 'info');
-}
+};
 
 App.prototype.initListener = function(elements, type) {
     for (i = 0; i < elements.length; i++) {
@@ -30,7 +30,7 @@ App.prototype.initListener = function(elements, type) {
             }
         }
     }
-}
+};
 
 
 App.prototype.showContent = function(obj) {
@@ -41,7 +41,7 @@ App.prototype.showContent = function(obj) {
     }
     this.activeContent = document.querySelectorAll('[data-content=' +  targetName +']')[0];
     this.contentContainer.appendChild(this.activeContent);
-}
+};
 
 App.prototype.showInfo = function(obj) {
     var overlay = document.querySelectorAll('#overlay')[0],
@@ -49,5 +49,5 @@ App.prototype.showInfo = function(obj) {
 
         overlay.style.display = 'block';
         overlayWrapper.style.display = 'block';
-}
+};
 

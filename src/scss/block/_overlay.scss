@@ -17,7 +17,7 @@ $overlay-z-index: 1000;
     }
 
     &__content {
-        padding: 1em;
+        padding: $default-gap;
         background: none #fff;
     }
 }

@@ -1,0 +1,10 @@
+.input {
+  padding: .5em;
+  border: 1px solid $default-border-color;
+  border-radius: $default-border-radius;
+  width: 100%;
+
+  @media (min-width: $breakpoint-screen-mobile-wide) {
+    width: 50%;
+  }
+}

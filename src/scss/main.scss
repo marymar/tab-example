@@ -1,11 +1,15 @@
 //global
-@import 'global/reset';
+@import 'global/reset',
+        'global/variables';
 
 
 //block
 @import 'block/overlay',
         'block/content',
-        'block/form',
+        'block/form/form',
+        'block/form/button',
+        'block/form/input',
+        'block/form/textarea',
         'block/link',
         'block/navi',
         'block/footer';

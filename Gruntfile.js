@@ -12,17 +12,37 @@ module.exports = function(grunt) {
             }
         },
 
+        watch: {
+          scripts: {
+            files: ['src/**/*.js'],
+            tasks: ['copy:js'],
+            options: {
+              spawn: false
+            }
+          },
+
+          css: {
+            files: 'src/**/*.scss',
+            tasks: ['sass:dev']
+          },
+
+          html: {
+            files: 'src/**/*.html',
+            tasks: ['copy:html']
+          }
+        },
+
         copy: {
           html: {
             files: [
-             {expand: true, cwd: 'src/', src: ['**/*.html'], dest: 'public/'},
-            ],
+             {expand: true, cwd: 'src/', src: ['**/*.html'], dest: 'public/'}
+            ]
           },
           js: {
             files: [
-             {expand: true, cwd: 'src/js', src: ['**/*.js'], dest: 'public/assets/js'},
-            ],
-          },
+             {expand: true, cwd: 'src/js', src: ['**/*.js'], dest: 'public/assets/js'}
+            ]
+          }
         }
     });
 
@@ -30,5 +50,9 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['sass', 'copy']);
-}
+    grunt.loadNpmTasks('grunt-contrib-watch');
+
+    grunt.registerTask('default', ['watch']);
+
+    grunt.registerTask('build', ['sass', 'copy']);
+};

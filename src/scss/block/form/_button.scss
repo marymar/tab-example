@@ -1,0 +1,39 @@
+$buttons: (
+  confirm: (
+    color: #fff,
+    bg-color: #3a3e88
+  ),
+  abbort : (
+    color: #fff,
+    bg-color: #911
+
+  ),
+  cancel : (
+    color: #fff,
+    bg-color: #ea0
+  )
+);
+
+
+%button {
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  padding: ($default-gap / 2) $default-gap;
+  border-radius: $default-border-radius;
+  outline: none;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+
+@each $button-name, $button-settings in $buttons {
+  .button-#{$button-name} {
+    @extend %button;
+    @debug map-get($button-settings, 'bg-color');
+    background: none map-get($button-settings, bg-color);
+    color: map-get($button-settings, color);
+  }
+}
