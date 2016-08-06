@@ -1,0 +1,11 @@
+//global
+@import 'global/reset';
+
+
+//block
+@import 'block/overlay',
+        'block/content',
+        'block/form',
+        'block/link',
+        'block/navi',
+        'block/footer';

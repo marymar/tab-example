@@ -1,0 +1,10 @@
+.link {
+    color: #777;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:visited {
+        color: #777;
+    }
+}

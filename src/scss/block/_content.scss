@@ -1,0 +1,13 @@
+.content {
+   min-height: 50vw;
+   &-wrapper {
+     border: 1px solid #aaa;
+     padding: 1em;
+     margin: 1em;
+   }
+
+}
+
+.content-pool {
+    display: none;
+}

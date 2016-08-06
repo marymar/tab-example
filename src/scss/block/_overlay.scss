@@ -1,0 +1,23 @@
+$overlay-z-index: 1000;
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(102, 102, 102, 0.7);
+    position: fixed;
+    display: none;
+    z-index: $overlay-z-index;
+
+    &-wrapper {
+        display: none;
+        position: absolute;
+        width: 100%;
+        margin: 0 auto;
+        z-index: $overlay-z-index + 1;
+    }
+
+    &__content {
+        padding: 1em;
+        background: none #fff;
+    }
+}

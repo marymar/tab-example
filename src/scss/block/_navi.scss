@@ -1,0 +1,32 @@
+.navi {
+    color: #fff;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 1em 0 1em 1em;
+    background: none #777;
+
+
+    &__item {
+        float: left;
+    }
+
+    &__link {
+        color: currentColor;
+        text-decoration: none;
+        display: inline-block;
+        padding: .5em;
+
+        &:hover,
+        &:active,
+        &:visited {
+            color: currentColor;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
