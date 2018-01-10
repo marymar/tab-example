@@ -1,3 +1,3 @@
 # Sass / JS Workshop
 
-[Live Preview](http://marymar.github.io/workshop-sass-js)
+[Live Preview](http://marymar.github.io/tab-example)
